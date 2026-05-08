@@ -1,0 +1,1 @@
+ mongod --port 27018 --dbpath "C:\Users\sujal\OneDrive\Desktop\new db server"
