@@ -1,8 +1,10 @@
 import { Trash2 } from "lucide-react";
 import { useCart } from "../context/CartContext";
 
-export default function CartItem({ item: { name, image, quantity, price } }) {
+export default function CartItem({ item }) {
+  const { name, image, quantity, price } = item;
   const { removeFromCart } = useCart();
+
   return (
     <div className="flex items-center p-6 space-x-6">
       <img
@@ -18,7 +20,7 @@ export default function CartItem({ item: { name, image, quantity, price } }) {
       </div>
       <div className="text-right">
         <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400">
-          ₹{price * (quantity || 1)}
+          Rs. {price * (quantity || 1)}
         </p>
       </div>
       <button

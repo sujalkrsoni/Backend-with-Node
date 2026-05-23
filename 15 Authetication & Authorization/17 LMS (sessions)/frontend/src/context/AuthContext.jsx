@@ -5,13 +5,13 @@ const AuthContext = createContext(undefined);
 export function AuthProvider({ children }) {
   const [user, setUser] = useState();
 
-  const login = (email, password) => {
+  const login = (email) => {
     // In a real app, this would make an API call
     const userData = { email, name: email.split("@")[0] };
     setUser(userData);
   };
 
-  const register = (email, password) => {
+  const register = (email) => {
     // In a real app, this would make an API call
     const userData = { email, name: email.split("@")[0] };
     setUser(userData);

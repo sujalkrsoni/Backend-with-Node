@@ -17,7 +17,8 @@ export function CartProvider({ children }) {
         );
       }
 
-      return [...prevCart, { ...course, quantity: 1 }];
+ return [...prevCart, { ...course, quantity: 1 }];
+      // return {guestId : sessionId, courses :[...prevCart, { ...course, quantity: 1 }]};
     });
   };
 
@@ -39,8 +40,10 @@ export function CartProvider({ children }) {
   );
 }
 
-export function useCart() {
+export function useCart(_id) {
   const context = useContext(CartContext);
+  console.log("CartContext:", context);
+  console.log("course Id ", _id);
   if (context === undefined) {
     throw new Error("useCart must be used within a CartProvider");
   }
