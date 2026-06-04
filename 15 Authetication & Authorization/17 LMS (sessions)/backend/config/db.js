@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const DB_URIS = [
   process.env.MONGO_URI,
-  "mongodb://admin:admin@localhost:27017/lmsApp?authSource=admin",
-  "mongodb://localhost:27017/lmsApp",
+  // "mongodb://admin:admin@localhost:27017/lmsApp?authSource=admin",
+  "mongodb+srv://mrsujal:mrsujal@cluster0.6u8b04c.mongodb.net/lsmApp",
 ].filter(Boolean);
 
 export async function connectDB() {

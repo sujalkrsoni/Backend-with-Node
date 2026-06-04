@@ -10,7 +10,7 @@ const sessionSchema = new Schema({
     type: Schema.Types.Mixed,
     default: {},
   },
-  expiredAt: { type: Date, default: Date.now() + 1000 * 60 * 1 }, // 1 minute
+  expiredAt: { type: Date, default: Date.now() + 1000 * 60 * 10}, // 10 minute
 });
 
 const Session = mongoose.model("Session", sessionSchema);

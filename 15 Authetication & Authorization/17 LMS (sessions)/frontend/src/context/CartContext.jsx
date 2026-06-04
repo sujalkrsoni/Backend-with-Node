@@ -13,12 +13,11 @@ export function CartProvider({ children }) {
         return prevCart.map((item) =>
           item.name === course.name
             ? { ...item, quantity: (item.quantity || 1) + 1 }
-            : item
+            : item,
         );
       }
 
- return [...prevCart, { ...course, quantity: 1 }];
-      // return {guestId : sessionId, courses :[...prevCart, { ...course, quantity: 1 }]};
+      return [...prevCart, { ...course, quantity: 1 }];
     });
   };
 
@@ -28,7 +27,7 @@ export function CartProvider({ children }) {
 
   const cartCount = cart.reduce(
     (total, item) => total + (item.quantity || 1),
-    0
+    0,
   );
 
   return (
@@ -40,10 +39,9 @@ export function CartProvider({ children }) {
   );
 }
 
-export function useCart(_id) {
+export function useCart() {
   const context = useContext(CartContext);
   console.log("CartContext:", context);
-  console.log("course Id ", _id);
   if (context === undefined) {
     throw new Error("useCart must be used within a CartProvider");
   }
