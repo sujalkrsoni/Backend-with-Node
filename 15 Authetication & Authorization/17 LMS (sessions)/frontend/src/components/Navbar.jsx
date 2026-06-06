@@ -81,7 +81,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                         <MenuItem>
                           <button
                             onClick={logout}
-                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:dark:bg-white/10 data-[focus]:bg-gray-200 dark:text-gray-200`}
+                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-focus:dark:bg-white/10 data-focus:bg-gray-200 dark:text-gray-200`}
                           >
                             Sign out
                           </button>
@@ -92,7 +92,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                         <MenuItem>
                           <Link
                             to="/login"
-                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:dark:bg-white/10 data-[focus]:bg-gray-200 dark:text-gray-200`}
+                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-focus:dark:bg-white/10 data-focus:bg-gray-200 dark:text-gray-200`}
                           >
                             Sign in
                           </Link>
@@ -100,7 +100,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
                         <MenuItem>
                           <Link
                             to="/register"
-                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:dark:bg-white/10 data-[focus]:bg-gray-200 dark:text-gray-200`}
+                            className={`group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-focus:dark:bg-white/10 data-focus:bg-gray-200 dark:text-gray-200`}
                           >
                             Create account
                           </Link>
